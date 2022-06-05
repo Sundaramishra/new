@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+.navbar{
+    height: 7.3vw;
+    width: 100%;
+    background-color: #fff;
+}
+
+.navbar > img{
+    height: 10vw;
+    position: absolute;
+    top: 1.5vw;
+    left: 8vw;
+}
+
+.navbar .logo_container{
+    position: absolute;
+    right: 8vw;
+    top: 1.5vw;
+}
+
+.navbar .logo_container img{
+    height: 5.8vw;
+    margin: 0 0.7vw;
+}
+
+.main{
+    height: 40vw;
+    width: 100%;
+    background: url('./Assets/background.png') no-repeat center center/cover;
+    padding: 0 8vw;
+    display: flex;
+    gap: 18vw;
+}
+
+.main > div{
+    width: 36%;
+}
+
+.main .content{
+    padding-top: 6vw;
+}
+
+.main .content > h2 , .main .content > h3{
+    color: #002841;
+    font-size: 2vw;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.main .content > h3{
+    font-size: 1.2vw;
+    margin-top: -0.5vw
+}
+
+.main .content > h1{
+    font-size: 3.3vw;
+    color: #002841;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 900;
+    margin-top: 0.5vw
+}
+
+.main .content > h1 span{
+    color: #fff;
+}
+
+.main .content .div{
+    /* margin-top: 0.1vw; */
+    padding-right: 8vw;
+}
+
+.main .content .div div{
+    display: flex;
+}
+
+.main .content .div img{
+    height: 1.5vw;
+}
+
+.main .content .div span{
+    font-size: 1.1vw;
+    font-family: 'Noto Sans', sans-serif;
+    vertical-align: top;
+    margin-left: 0.5vw;
+    display: table-cell;
+}
+
+.div__2{
+    margin-top: 1vw;
+}
+
+.btn_div{
+    margin-top: 8vw;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.btn_div > div{
+    display: flex;
+    gap: 1.5vw;
+}
+
+.btn_div .div_btn{
+    text-align: center;
+}
+
+.btn_div .div_btn h2{
+    font-size: 1.5vw;
+}
+.btn_div .div_btn h1{
+    background: #f00;
+    color: #fff;
+    padding: 0 0.2vw;
+    font-size: 1.8vw;
+}
+
+.btn_div h3{
+    margin-top: 1vw;
+    font-size: 1.18vw;
+    font-weight: 400;
+}
+
+.contact_form{
+    background: #fff;
+    height: 42vw;
+    margin-top: 3vw;
+}
+
+.contact_form form{
+    padding: 0 3vw;
+    margin-top: 3vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_form > h2{
+    text-align: center;
+    font-size: 1.27vw;
+    color: #002841;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 800;
+    margin-top: 2vw
+}
+.contact_form > h3{
+    text-align: center;
+    font-size: 1.1vw;
+    color: #002841;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+.contact_form .form_input{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5vw;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.3);
+-moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.3);
+box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.3);
+}
+
+.contact_form .form_input img{
+    background: #004685;
+    padding: 0.5vw 1vw;
+    width: 1.3vw;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.contact_form .form_input label{
+    padding: 1vw 1vw;
+    font-size: 1vw;
+    font-family: 'Noto Sans', sans-serif;
+    width: 4vw;
+    background: #f2eff2;
+}
+.contact_form .form_input input{
+    height: 3vw;
+    padding-left: 0.5vw;
+    outline: none;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1.2vw;
+}
+
+.contact_form .text{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 0.5vw;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.3);
+-moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.3);
+box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.3);
+}
+
+.contact_form .text .img_container{
+    height: 6vw;
+    background: #004685;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.contact_form .form_input textarea{
+    resize: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.btn button{
+    background: #f00;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 20vw;
+    font-size: 1.6vw;
+    padding: 0.3vw 0;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 1.5vw;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.contact_form form > h3{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.68vw;
+    color: #707070;
+    margin-top: 0.15vw;
+}
+
+::placeholder{
+    color: rgb(175, 175, 175);
+}
+.contact_form .form_input img{
+    background: #004685;
+    padding: 1vw ;
+    height: 1.5vw;
+}
+
+.footer{
+    text-align: center;
+    padding: 1vw 0;
+}
+
+.footer p{
+    font-size: 1vw;
+    font-family: 'Noto Sans', sans-serif;
+    color: #9e8989;
+}
+
+.footer h2{
+    font-size: 0.95vw;
+    font-weight: 400;
+    font-family: 'Noto Sans', sans-serif;
+    color: #808080;
+    margin-top: 0.8vw;
+    margin-bottom: 3vw;
+}
