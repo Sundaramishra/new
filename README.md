@@ -10,11 +10,17 @@ A comprehensive Hospital and Clinic Management System built with PHP, MySQL, HTM
 mysql -u root -p < database/hospital_crm.sql
 ```
 
-### 2. Configuration
+### 2. Update Demo Passwords
+```bash
+# Run this once to properly hash demo passwords
+php update_passwords.php
+```
+
+### 3. Configuration
 - Update database credentials in `config/database.php` if needed
 - Default: `localhost`, `root`, no password, database: `hospital_crm`
 
-### 3. Run Project
+### 4. Run Project
 ```bash
 # Using PHP built-in server
 php -S localhost:8000
@@ -41,6 +47,10 @@ php -S localhost:8000
 ✅ **Demo Data Included**  
 ✅ **Responsive Design**  
 ✅ **Security Features**  
+✅ **Patient Management** (Add, Search, View)  
+✅ **Appointment Booking System** (Conflict checking, Time slots)  
+✅ **Appointments Management** (View, Filter, Status updates)  
+✅ **Role-based Access Control**  
 
 ## 🏗️ Project Structure
 
@@ -53,6 +63,10 @@ hospital-crm/
 ├── index.php               # Login page
 ├── dashboard.php           # Main dashboard
 ├── logout.php              # Logout script
+├── patients.php            # Patient management
+├── book-appointment.php    # Appointment booking
+├── appointments.php        # Appointments management
+├── update_passwords.php    # Password update script
 ├── style.css               # Original styling
 ├── requirements.md         # Full requirements document
 └── README.md               # This file
@@ -100,7 +114,14 @@ All 41 requirements from your specification are documented in `requirements.md` 
 
 ---
 
-**🚀 Project Status**: Core foundation complete with login system, database, and role-based dashboard.  
-**⏰ Ready for**: Feature development based on priority requirements.
+**🚀 Project Status**: Core foundation + Patient & Appointment management complete.  
+**⏰ Ready for**: Additional features like billing, prescriptions, lab management, etc.
+
+## 🎯 Current Features Working:
+1. **Authentication System** - Multi-role login/logout
+2. **Dashboard** - Role-specific views with statistics
+3. **Patient Management** - Add, search, view patients  
+4. **Appointment Booking** - Full booking system with conflict checking
+5. **Appointment Management** - View and manage appointments by role
 
 **Demo URL**: `http://localhost:8000` (after setup)
