@@ -4,19 +4,54 @@ require_once 'config.php';
 // Doctor Management
 function addDoctor($data) {
     global $pdo;
-    // TODO: Insert doctor into DB
+    $sql = "INSERT INTO doctors (name, midname, surname, contact, address, education, experience, certificates, awards, vitals, image, department_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $pdo->prepare($sql);
+    return $stmt->execute([
+        $data['name'],
+        $data['midname'],
+        $data['surname'],
+        $data['contact'],
+        $data['address'],
+        $data['education'],
+        $data['experience'],
+        $data['certificates'],
+        $data['awards'],
+        $data['vitals'],
+        $data['image'],
+        $data['department_id']
+    ]);
 }
 function editDoctor($id, $data) {
     global $pdo;
-    // TODO: Update doctor in DB
+    $sql = "UPDATE doctors SET name=?, midname=?, surname=?, contact=?, address=?, education=?, experience=?, certificates=?, awards=?, vitals=?, image=?, department_id=? WHERE id=?";
+    $stmt = $pdo->prepare($sql);
+    return $stmt->execute([
+        $data['name'],
+        $data['midname'],
+        $data['surname'],
+        $data['contact'],
+        $data['address'],
+        $data['education'],
+        $data['experience'],
+        $data['certificates'],
+        $data['awards'],
+        $data['vitals'],
+        $data['image'],
+        $data['department_id'],
+        $id
+    ]);
 }
 function deleteDoctor($id) {
     global $pdo;
-    // TODO: Soft delete doctor in DB
+    $sql = "UPDATE doctors SET is_deleted=1 WHERE id=?";
+    $stmt = $pdo->prepare($sql);
+    return $stmt->execute([$id]);
 }
 function listDoctors() {
     global $pdo;
-    // TODO: Fetch all doctors from DB
+    $sql = "SELECT * FROM doctors WHERE is_deleted=0 ORDER BY id DESC";
+    $stmt = $pdo->query($sql);
+    return $stmt->fetchAll();
 }
 
 // Department Management
